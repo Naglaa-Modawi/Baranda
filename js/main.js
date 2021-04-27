@@ -1,52 +1,22 @@
 $(function(){
     'use strict';
-    //Window Section
-    $(window).scroll(function(){
-        console.log ($(this).scrollTop());
-      
-
-        if($(window).scrollTop() >= 2600){
-            $('.subscrib .lead , .form-control').fadeIn(3000)
-        }
+    //Start Window 
+    $(window).scroll(function(){//Start Window
+       
         //Scroall To Top Function
         var scrolToTop =  $('.sroal');
-        if($(window).scrollTop() >= 2000){
+        if($(window).scrollTop() >= 800){
             scrolToTop.fadeIn(500);
         }
         else{
             scrolToTop.fadeOut(500);
         }
-        //About Function
-        
-       if($(window).scrollTop() >= 390){
-        $('.About img').animate({
-            width:'80%',
-            textAline:'center',
-            opacity:1,
-            borderRadius:5,
-            height:'250px'
-            
-        },1000,function(){
-            $('.About .lead').fadeIn(1000);
-        }) 
-        
-        }
-
-
+           //ServicesData Appear
         if($(window).scrollTop() >= 1000){
             $('.Services .ServicesData').slideDown(2000);
         };
-    
-     });
-
-
-
-// End Window Section
-    $('.sroal').click(function(){
-    $("html,body").animate({scrollTop:0},600);
- });
-//Scroall To Top Function End
-/*========================================*/
+    });//End Window 
+//++++++++++++++++++++++++++++++++++++//
 
 //Navbar Actions
 $('.navbar li a').click(function(){
@@ -56,34 +26,52 @@ $('.navbar li a').click(function(){
     window.console.log("#" +$(this).data('scroll'));
     window.console.log( $(this).offset().top);
 });
+// End Navbar Actions
 
-/*========================================*/
-//Chang Style Of Image About
+//Scroall To Top Function Start
+    $('.sroal').click(function(){
+        $("html,body").animate({scrollTop:0},600);
+     });
+ //Scroall To Top Function End
 
+ //Chang Style Of Services
 $(".Services .ServicesData ").hover(function(){
     $(this).animate({
         borderWidth: "3px",
         borderRadius:'5',
-        opacity:"1"
-          
+        opacity:"8"   
     });
+}); // End Chang Style Of Services
+
+//Chang The Tours
+$('.Tours_info p').on('click',function(){
+    console.log($(this).next().attr('src'));
+    $('.Main_image , .Main-Tours img').hide();
+    $('.Main-Tours iframe').attr('src',$(this).next().attr('src')).show();
+    $('.Main-Tours iframe').attr('src',$(this).next().attr('src'))
+})
+$(' .Other-Tours iframe').hide();
+    $('.Main-Tours button ').click(function(){
+        $('.Main_image , .Main-Tours img').hide();
+
+        $('.Main-Tours iframe').show();
+    });
+
+     //Scroall To Spacific TOurs
+     $('.Tours_info .only p').click(function(){
+
+        $('html ,body').animate({ 
+            scrollTop: $("#" +$(this).data('scroll')).offset().top 
+        },1000)
 });
-    
-    
 
-    $(".About img  ").mouseleave(function(){
-        $(this).animate({
-            width: "95%",
-    height: "300px",
-    borderWidth: "2px", 
-    opacity: "0.8"
-        });
+//Scroll To Price Section
+$('.Header .Header-Cover button').click(function(){
 
-    });
-/*========================================*/
-   
-
-});//End Function
+    $('html ,body').animate({ 
+        scrollTop: $("#" +$(this).data('scroll')).offset().top 
+    },1000)
+});
 
 
 //Start Copy Whriter 
@@ -143,35 +131,28 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
-//End Copy Whiter 
-
-/*========================================*/
-//Chang The Tours
-$('.Tours_info p').on('click',function(){
-    console.log($(this).next().attr('src'));
-    $('.Main_image , .Main-Tours img').hide();
-    $('.Main-Tours iframe').attr('src',$(this).next().attr('src')).show();
-    $('.Main-Tours iframe').attr('src',$(this).next().attr('src'))
-})
-$(' .Other-Tours iframe').hide();
-
-    $('.Main-Tours button ').click(function(){
-        $('.Main_image , .Main-Tours img').hide();
-
-        $('.Main-Tours iframe').show();
-    });
-
-    
 
 
-    //Scroall To Spacific TOurs
-    $('.Tours_info .only p').click(function(){
-
-        $('html ,body').animate({ 
-            scrollTop: $("#" +$(this).data('scroll')).offset().top 
-        },1000)
 
 
-    window.console.log('#' + $(this).data('scroll'));
-    
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});//End Man function

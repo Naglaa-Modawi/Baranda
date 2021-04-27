@@ -4,10 +4,6 @@
    box-sizing: border-box;
 
 }
-body{
-    height: 2000px;
-}
-
 .carousel-inner{
     height: 500px;
 }
@@ -84,10 +80,15 @@ hr{
   }
   .Header h1{
     text-align: center;
-    padding-top:10em;
+    padding-top:8em;
     margin-top: -120px;
     color:#F47D25;
     font-weight: bold;
+  }
+  .Header h2{
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
   }
 
   .Header .Header-Cover{
@@ -95,8 +96,51 @@ hr{
     min-height: 500px;
     padding-bottom: 30px;
     padding-top: 30px;
-    
+  }
+  .Header .Header-Cover  button {
+    border-color: #F47D25 ;
+    height: 35px;
+    margin-top: 57px;
+    color:   #F47D25;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .Price{
+    background : url("../images/VR2.jpg")no-repeat center center fixed; 
+        margin-top: 20px;
+        color: white;
+  }
+  .Price h1{
+      margin-top: 43px;
+      color: white;
+  }
+  .Price p{
+      color: white;
+  }
+  .Price .stat{
+    background:rgba(152, 84, 248, 0.4);
 
+  }
+  .Price  button{
+    border-color:#F47D25 ;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color:  #2B0463;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .Price  button a{
+      text-decoration: none;
+  }
+  .Header .Header-Covern button:hover {
+    background-color: #2B0463;
+    border-color:#F47D25 ;
+    height: 35px;
+    margin-top: 57px;
+    color:  #F47D25 ;
+    font-size: 18px;
+    font-weight: bold;
   }
 
 .About{
@@ -123,7 +167,7 @@ background-color: white;
 /*Start Style Of Our Sevices*/
 
 .Services{
-   background : url("../images/baranda1.jpg")no-repeat center center fixed;
+   background : url("../images/VR2.jpg")no-repeat center center fixed;
    margin-bottom: 30px;
 }
 .Services p{
@@ -137,7 +181,7 @@ background:rgba(152, 84, 248, 0.4);
 }
 
 .Services h1{
-  margin-bottom: 30px;
+  margin-bottom: -15px;
 }
  .Services .ServicesData {
     background-color: white;
@@ -276,7 +320,7 @@ background:rgba(152, 84, 248, 0.4);
   
  .contact-us .fields{
    /* background-color: rgb(238, 236, 236);*/
-   background:rgba(152, 84, 248, 0.4);
+   background:rgba(163, 145, 189, 0.4);
 
      min-height: 300px;
      padding-bottom: 30px;
@@ -313,15 +357,23 @@ background:rgba(152, 84, 248, 0.4);
  .contact-info{
      margin-bottom: 30px;
  }
+ 
  .contact-us .contact-address p,a {
     font-weight: bold;
-    color: white;
+    color: #2B0463;
     font-size: 20px;
 }
 .contact-us .contact-address i{
-    color: #2B0463
+    color: #2B0463;
+    margin-top: 14px;
 }
+.contact-us .contact-address{
+    background-color: white;
+    border: 2px solid #f47d25;
+    height: 106px;
 
+    
+}
 
 /*End contact us style*/
 
@@ -392,27 +444,47 @@ background:rgba(152, 84, 248, 0.4);
     color: #F47D25;
 }
  #Tours1 .only{
-    background : url(../images/h111.jpg )no-repeat center  ; 
+    background : url(../images/h111.jpg ) center  ; 
 }
  #Tours2 .only{
-    background-image: url(../images/55.jpg);
+    background-image: url(../images/house.jpg);
  }
  #Tours3 .only{ 
     background-image: url(../images/YNB1.jpg);
  }
  #Tours4 .only{
-    background-image: url(../images/YNB1.jpg);
+    background-image: url(../images/gg1.jpg);
  }
  #Tours1, #Tours2 , #Tours4 , #Tours3{
     height: 200px;
     padding: 5px;
  }
- 
+
+.Contact h3{
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 24px;
+}
+.Story {
+    background : url("../images/story1.jpg" ) no-repeat center center fixed; 
+}
+.Story h1{
+    color: white;
+}
+.Story .Story-Cover p{
+    color: white;
+}
+.Story .Story-Cover{
+    background:rgba(152, 84, 248, 0.4);
+}
+
 .Story p{
     color: #2B0463;
 }
 .Story .lead span{
 color: #F47D25;
+font-weight: bold;
+font-size: 24px;
 }
  /*End contact Tours style*/
 
@@ -471,18 +543,13 @@ margin-top: 30px;
 }
 
 
-.Featurs{
-    
-    background-color: white;
-    border: honeydew solid 3px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding: 10px;
-
-margin: auto;
-}
-
 /*Media Quiery Style*/
+@media(max-width:690px){
+    .contact-us .contact-address {
+        margin-bottom: 5px;
+        border: 2px solid red
+    }
+}
 @media(max-width:766px){
 
     .subscrib .form-control{
@@ -493,11 +560,17 @@ margin: auto;
     .Tours_info .Tours_info{
         margin-bottom: 7px;
     }
-    @media(min-width: 991px){
-        .nav {
-        padding-right: 88px;
-        }
+}
+@media(min-width: 991px){
+    .nav {
+    padding-right: 88px;
     }
+}
+@media(min-width: 767px)and (max-width: 948px){
+    .Contact h3{
+        font-size: 17px;
+    }
+
 }
   
 /*textdecoration:none*/
